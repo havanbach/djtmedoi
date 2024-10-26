@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/swipe_bill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textColor="#FF5722"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng của bạn"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+        <!-- Thuộc tính tabMode="scrollable" nếu có nhiều tab thì ta dùng nó sẽ trượt được-->
+        <!-- Còn nếu tabMode="fixed" thì nó sẽ chia tablayout thành các phần bằng nhau-->
+        <com.example.djtmedoi.Adapter.CustomTabLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_Layout"
+            app:tabSelectedTextColor="#FF5722"
+            app:tabBackground="@color/white"
+            app:tabTextColor="@android:color/darker_gray"
+            app:tabIndicatorHeight="2dp"
+            app:tabIndicatorColor="#FF5722"
+            app:tabMode="scrollable"/>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_Pager"/>
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Admin.AdminAddLoaiSPActivity">
+
+    <RelativeLayout
+        android:id="@+id/mnb"
+        android:background="#FF5722"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:id="@+id/img_back_themloai"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back"
+            app:tint="#FFFFFF" />
+        <TextView
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm loại sản phẩm"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/mnb"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image_them_loai"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/thoi"/>
+
+    <EditText
+        android:id="@+id/edt_them_loai"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/image_them_loai"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên loại sản phẩm"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btn_them_loai"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Thêm loại"
+        android:layout_below="@+id/edt_them_loai"/>
+
+</RelativeLayout>

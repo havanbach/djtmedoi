@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/cart_background"
+    android:elevation="3dp"
+    android:id="@+id/constraint_item_gio_hang">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/img_giohang"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_margin="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thoi"/>
+
+    <TextView
+        android:maxLines="1"
+        android:singleLine="true"
+        android:id="@+id/tv_ten_giohang"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="title"
+        android:textColor="#373b54"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_giohang"
+        app:layout_constraintTop_toTopOf="@+id/img_giohang" />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Khối lượng: "
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_giohang"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ten_giohang"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_marginTop="2dp"
+        android:id="@+id/tv_chatlieu_giohang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Kg"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ten_giohang"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_minus_giohang"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/tv_number_giohang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:text="1"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/btn_plus_giohang"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_number_giohang"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/plus" />
+
+    <TextView
+        android:id="@+id/tv_giatien_giohang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="12sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/tv_ten_giohang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_ten_giohang"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="VNĐ"
+        android:textColor="#ff3d00"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_giatien_giohang"
+        app:layout_constraintStart_toEndOf="@+id/tv_giatien_giohang"
+        app:layout_constraintTop_toTopOf="@+id/tv_giatien_giohang"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_total_giohang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_plus_giohang"
+        app:layout_constraintEnd_toEndOf="@+id/tv_giatien_giohang"
+        app:layout_constraintTop_toTopOf="@+id/btn_plus_giohang"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="VNĐ"
+        android:textColor="#ff3d00"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_total_giohang"
+        app:layout_constraintStart_toEndOf="@+id/tv_total_giohang"
+        app:layout_constraintTop_toTopOf="@+id/tv_total_giohang"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

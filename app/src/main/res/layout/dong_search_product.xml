@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="2dp"
+    android:orientation="horizontal"
+    android:elevation="1dp"
+    android:background="@drawable/cart_background"
+    android:id="@+id/linear_item_search"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginStart="2dp"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        app:cardCornerRadius="16sp">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/img_seach"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:src="@drawable/pop_1"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_name_search"
+            android:lines="1"
+            android:layout_marginEnd="20dp"
+            android:ellipsize="end"
+            android:layout_marginStart="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Thoi trang"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_mota_search"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="Mô tả: "
+                android:textSize="12sp"/>
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/tv_gia_search"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25.000"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="8sp"
+                    android:layout_marginStart="2dp"
+                    android:layout_toEndOf="@+id/tv_gia_search"
+                    android:textColor="#FF5722"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VNĐ"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:layout_marginEnd="10dp">
+
+
+    <RelativeLayout
+        android:layout_alignParentEnd="true"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_chat"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tv_show_msg"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_right"
+            android:text="I am Chinh"
+            android:textColor="#fff"
+            android:padding="8dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_seen"
+            android:text="Seen"
+            android:layout_below="@+id/tv_show_msg"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

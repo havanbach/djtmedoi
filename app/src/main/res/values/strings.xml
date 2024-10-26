@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Thoitrang</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgotpassword"><u>Quên mật khẩu?</u></string>
+    <string name="admin">Đăng nhập dành cho quản trị viên</string>
+    <string name="xinchao"><u>bạn!</u></string>
+
+    <string name="channel_name">Channel 1</string>
+    <string name="channel_description">This is channel 1</string>
+
+</resources>

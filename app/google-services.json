@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163198429341",
+    "project_id": "djtmedoi89-60dd6",
+    "storage_bucket": "djtmedoi89-60dd6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163198429341:android:ccbd2c2cf575ccc6aecc74",
+        "android_client_info": {
+          "package_name": "com.example.djtmedoi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABb5WhfDeUNdyUlerwcHxW5bqLBKjapFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

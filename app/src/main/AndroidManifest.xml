@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" android:minSdkVersion="34" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Djtmedoi"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="34"
+        tools:replace="android:theme">
+        <activity android:name="com.example.djtmedoi.View.CartActivity"></activity>
+        <activity android:name="com.example.djtmedoi.View.OrderSuccessActivity" />
+        <activity
+            android:name="com.example.djtmedoi.View.ChatActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"/>
+        <activity android:name="com.example.djtmedoi.View.MessageActivity" />
+        <activity android:name="com.example.djtmedoi.View.DanhGiaActivity" />
+        <activity android:name="com.example.djtmedoi.View.FavoriteActivity" />
+        <activity android:name="com.example.djtmedoi.View.CommentActivity" />
+        <activity android:name="com.example.djtmedoi.View.DetailSPActivity" />
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminUsersActivity" />
+        <activity android:name="com.example.djtmedoi.View.SearchActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminCTHDActivity" />
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminAddLoaiSPActivity" />
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminAddSPActivity" />
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminProductActivity" />
+        <activity android:name="com.example.djtmedoi.View.Admin.AdminChartBillActivity" />
+
+
+
+        <activity
+            android:name="com.example.djtmedoi.View.Admin.AdminBillMainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.Admin.AdminHomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.CTHDActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.CategoryActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.ForgotPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.djtmedoi.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.djtmedoi.View.SignInActivity"
+            android:exported="true" />
+
+
+        <activity
+            android:name="com.example.djtmedoi.View.CaptureAct"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
+
+        <receiver
+            android:name="com.example.djtmedoi.ultil.MyReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

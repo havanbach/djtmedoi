@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/cart_background"
+    android:elevation="3dp"
+    android:id="@+id/relative_item_users"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:id="@+id/cir_users"
+            android:layout_margin="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_user"/>
+
+        <TextView
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:id="@+id/tv_name_users"/>
+
+        <TextView
+            android:textColor="#2196F3"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:gravity="center"
+            android:id="@+id/tv_email_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user@gmail.com"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

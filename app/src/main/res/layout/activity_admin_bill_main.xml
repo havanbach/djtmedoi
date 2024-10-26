@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/toolbar_bill_admin"
+        android:minHeight="?attr/actionBarSize"
+        android:elevation="2dp"
+        android:background="#FF5722"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Người dùng: "
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <Spinner
+            android:layout_marginStart="10dp"
+            android:layout_weight="7"
+            android:layout_gravity="center"
+            android:id="@+id/spinner_user_admin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Trạng thái: "
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <Spinner
+            android:layout_weight="7"
+            android:layout_gravity="center"
+            android:id="@+id/spinner_status_admin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="10dp"
+        android:id="@+id/rcv_bill_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

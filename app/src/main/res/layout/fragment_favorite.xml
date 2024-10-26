@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FavoriteFragment">
+
+    <TextView
+        android:background="#FF5722"
+        android:id="@+id/titlefavorite"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="20dp"
+        android:textColor="#006400"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progressBar_favorite"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:background="@drawable/layout_bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rcv_favorite"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="12dp"
+        android:text=" yêu thích của bạn"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textColor="#006400"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_null_favorite"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Bạn chưa có sản phẩm yêu thích nào"/>
+</RelativeLayout>

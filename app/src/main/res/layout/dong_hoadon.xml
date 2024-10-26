@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="7dp"
+    android:elevation="8dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/boder1"
+    android:id="@+id/layout_hoadon">
+
+    <TextView
+
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_ngaydat"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:text="20/11/2022"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_margin="10dp"
+        android:background="#ff0000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="Nguyễn Văn Chính"
+            android:id="@+id/tv_hoten"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="0906181931"
+            android:id="@+id/tv_sdt"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="Nam Định"
+            android:id="@+id/tv_diachi"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:text="2.222.222"
+            android:id="@+id/tv_tongtien"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Menu two"
+        android:id="@+id/menu_two"
+        app:actionLayout="@layout/profile_menu_layout"
+        app:showAsAction="always" />
+    <item android:title="Menu one"
+        android:id="@+id/menu_one"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_tune"/>
+</menu>
