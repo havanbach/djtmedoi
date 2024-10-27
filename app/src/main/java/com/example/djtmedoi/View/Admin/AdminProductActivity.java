@@ -3,6 +3,7 @@ package com.example.djtmedoi.View.Admin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -40,12 +41,12 @@ public class AdminProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_admin_product);
 
         InitWidget();
         Init();
-//        HandleGetDataAllProduct();
+        HandleGetDataAllProduct();
         Event();
     }
 
@@ -67,34 +68,52 @@ public class AdminProductActivity extends AppCompatActivity {
     }
 
     private void HandleGetDataAllProduct() {
-        db.collection("SanPham").
-                get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        db.collection("SanPham").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
-                if(queryDocumentSnapshots.size()>0){
-                    for(QueryDocumentSnapshot d : queryDocumentSnapshots){
-                        mlistProduct.add(new Product(d.getId(),d.getString("tensp"),
-                                d.getLong("giatien"),d.getString("hinhanh"),
-                                d.getString("loaisp"),d.getString("mota"),
-                                d.getLong("soluong"),d.getString("size"),
-                                d.getLong("type"),d.getString("chatlieu")));
+                if (queryDocumentSnapshots.size() > 0) {
+                    for (QueryDocumentSnapshot d : queryDocumentSnapshots) {
+                        // Kiểm tra và lấy giá trị giatien, soluong
+                        Long giatien = d.getLong("giatien");
+                        Long soluong = d.getLong("soluong");
+                        Long type = d.getLong("type");
+                        type = (type != null) ? type : 0L; // Hoặc một giá trị mặc định nào đó
+
+                        // Nếu giatien hoặc soluong là null, sử dụng giá trị mặc định là 0L
+                        giatien = (giatien != null) ? giatien : 0L; // Giá trị mặc định cho giatien
+                        soluong = (soluong != null) ? soluong : 0L; // Giá trị mặc định cho soluong
+
+                        // Thêm sản phẩm vào danh sách
+                        mlistProduct.add(new Product(
+                                d.getId(),
+                                d.getString("tensp"),
+                                giatien,
+                                d.getString("hinhanh"),
+                                d.getString("loaisp"),
+                                d.getString("mota"),
+                                soluong,
+                                d.getString("size"),
+                                d.getLong("type"), // Kiểm tra null nếu cần
+                                d.getString("chatlieu")
+                        ));
                     }
                     adapter = new AdminProductAdapter(AdminProductActivity.this, mlistProduct, new IClickCTHD() {
                         @Override
                         public void onClickCTHD(int pos) {
                             Product product = mlistProduct.get(pos);
                             Intent intent = new Intent(AdminProductActivity.this, AdminAddSPActivity.class);
-                            intent.putExtra("SP",product);
+                            intent.putExtra("SP", product);
                             startActivity(intent);
                         }
                     });
-                    rcvAdminProduct.setLayoutManager(new LinearLayoutManager(AdminProductActivity.this,RecyclerView.VERTICAL,false));
+                    rcvAdminProduct.setLayoutManager(new LinearLayoutManager(AdminProductActivity.this, RecyclerView.VERTICAL, false));
                     rcvAdminProduct.setAdapter(adapter);
                 }
-
             }
         });
     }
+
+
 
     private void Init() {
         mlistProduct = new ArrayList<>();

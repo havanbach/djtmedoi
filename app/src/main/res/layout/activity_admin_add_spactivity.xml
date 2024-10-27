@@ -53,8 +53,8 @@
                 android:src="@drawable/ic_check_black_24dp" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/image_add"
+        <ImageButton
+            android:id="@+id/themanh"
             android:layout_width="130dp"
             android:layout_height="135dp"
             android:layout_marginStart="10dp"

@@ -197,14 +197,14 @@ public class HomeFragment extends Fragment {
         else {
             replace(new ProfileFragment());
         }
-//        switch (item.getItemId()){
-//            case R.id.menu_one:
-//                Toast.makeText(getContext(), "Menu one", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.menu_two:
-//                replace(new ProfileFragment());
-//                break;
-//        }
+        switch (item.getItemId()){
+            case R.id.menu_one:
+                Toast.makeText(getContext(), "Menu one", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menu_two:
+                replace(new ProfileFragment());
+                break;
+        }
         return super.onOptionsItemSelected(item);
     }
 

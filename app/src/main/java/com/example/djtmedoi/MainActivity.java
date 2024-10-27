@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Toast;
 import com.example.djtmedoi.R;
 import com.example.djtmedoi.fragment.BillFragment;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         MyReceiver = new MyReceiver();      // Check Internet
         broadcastIntent();                  // Check Internet
@@ -68,47 +69,46 @@ public class MainActivity extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
 
-                    int itemId = item.getItemId();
-                    if (itemId == R.id.hometrangchu) {
-                        selectedFragment = new HomeFragment();
-                    } else if (itemId == R.id.canhan) {
-                        selectedFragment = new ProfileFragment();
-                    }else if (itemId == R.id.yeuthich) {
-                        selectedFragment = new FavoriteFragment();
-                    }else if (itemId == R.id.donhang) {
-                        selectedFragment = new BillFragment();
-                    }else if (itemId == R.id.khac) {
-                        selectedFragment = new NotifyFragment();
-                    }
-//                    switch (item.getItemId()) {
-//                        case R.id.hometrangchu:
-//                            selectedFragment = new HomeFragment();
-//                            break;
-//                        case R.id.canhan:
-//                            selectedFragment = new ProfileFragment();
-//                            break;
-//                        case R.id.yeuthich:
-//                            selectedFragment = new FavoriteFragment();
-//                            break;
-//                        case R.id.donhang:
-//                            selectedFragment = new BillFragment();
-//                            break;
-//                        case R.id.khac:
-//                            selectedFragment = new NotifyFragment();
-//                            break;
-//                        default:
-//                            // Xử lý trường hợp không xác định
-//                            return false;
+//                    int itemId = item.getItemId();
+//                    if (itemId == R.id.hometrangchu) {
+//                        selectedFragment = new HomeFragment();
+//                    } else if (itemId == R.id.canhan) {
+//                        selectedFragment = new ProfileFragment();
+//                    }else if (itemId == R.id.yeuthich) {
+//                        selectedFragment = new FavoriteFragment();
+//                    }else if (itemId == R.id.donhang) {
+//                        selectedFragment = new BillFragment();
+//                    }else if (itemId == R.id.khac) {
+//                        selectedFragment = new NotifyFragment();
 //                    }
-
-                    else{
+                    switch (item.getItemId()) {
+                        case R.id.hometrangchu:
+                            selectedFragment = new HomeFragment();
+                            break;
+                        case R.id.canhan:
+                            selectedFragment = new ProfileFragment();
+                            break;
+                        case R.id.yeuthich:
+                            selectedFragment = new FavoriteFragment();
+                            break;
+                        case R.id.donhang:
+                            selectedFragment = new BillFragment();
+                            break;
+                        case R.id.khac:
+                            selectedFragment = new NotifyFragment();
+                            break;
+                        default:
+                            // Xử lý trường hợp không xác định
+                            return false;
+                    }
+                    if (selectedFragment != null) {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.frame, selectedFragment)
                                 .commit();
                     }
-
                     return true;
                 }
+
             });
         } else {
             Log.e("MainActivity", "BottomNavigationView is null!");

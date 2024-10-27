@@ -15,13 +15,14 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".Notification.MyApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Djtmedoi"
         android:usesCleartextTraffic="true"
         tools:targetApi="34"
         tools:replace="android:theme">
-        <activity android:name="com.example.djtmedoi.View.CartActivity"></activity>
+<!--        <activity android:name="com.example.djtmedoi.View.CartActivity"></activity>-->
         <activity android:name="com.example.djtmedoi.View.OrderSuccessActivity" />
         <activity
             android:name="com.example.djtmedoi.View.ChatActivity"

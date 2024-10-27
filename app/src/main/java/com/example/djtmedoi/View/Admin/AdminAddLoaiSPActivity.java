@@ -44,6 +44,7 @@ public class AdminAddLoaiSPActivity extends AppCompatActivity {
     private static final int library_picker = 987;
     private ProgressDialog dialog;
     private String image = "";
+
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override

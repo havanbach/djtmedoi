@@ -13,12 +13,14 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.CookieManager;
 import android.webkit.URLUtil;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -64,7 +66,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
     private CircleImageView imgAddLoaiProduct;
     private ImageView btnAddBack, btnRefresh, btnSave;
     private EditText edtTenSP, edtGiatienSP, edtsizeSP, edtchatlieuSP, edtSoluongSP, edtTypeSP, edtMotaSP;
-    private ImageView imgAdd;
+    private ImageButton imgAdd;
     private Button btnDanhmuc, btnDelete;
     private AppCompatButton btnEdit;
     private Spinner spinnerDanhMuc;
@@ -82,7 +84,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_spactivity);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         InitWidget();
         Init();
@@ -141,6 +143,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
                 imgAdd.setImageResource(R.drawable.pl);
             }
         });
+
 
         // Nếu xóa bất kỳ 1 sản phẩm nào đó thì những hóa đơn có chứa sản phẩm đó cũng phải bị xóa hoặc dùng nhiều cách khác.
         // Ở đây lựa chọn xóa luôn hóa đơn chứa sản phẩm bị xóa.
@@ -460,7 +463,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
         edtSoluongSP = findViewById(R.id.edt_soluongsp);
         edtTypeSP = findViewById(R.id.edt_typesp);
         edtMotaSP = findViewById(R.id.edt_motasp);
-        imgAdd = findViewById(R.id.image_add);
+        imgAdd = findViewById(R.id.themanh);
         btnDanhmuc = findViewById(R.id.btn_danhmuc);
         btnDelete = findViewById(R.id.btn_delete);
         btnEdit = findViewById(R.id.btn_edit);
@@ -475,6 +478,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
         dialog.setCanceledOnTouchOutside(false);
     }
 
+
     private void pickImage() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
@@ -487,11 +491,11 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
         }
     }
 
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            // pick image after request permission success
             pickImage();
         }
     }
@@ -537,6 +541,7 @@ public class AdminAddSPActivity extends AppCompatActivity implements AdapterView
 
         }
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
