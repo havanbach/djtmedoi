@@ -22,7 +22,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34"
         tools:replace="android:theme">
-<!--        <activity android:name="com.example.djtmedoi.View.CartActivity"></activity>-->
+        <activity android:name="com.example.djtmedoi.View.CartActivity"></activity>
         <activity android:name="com.example.djtmedoi.View.OrderSuccessActivity" />
         <activity
             android:name="com.example.djtmedoi.View.ChatActivity"
